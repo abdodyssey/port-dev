@@ -144,6 +144,7 @@ const CONFIG = {
   projects: [
     {
       title: "AI Research Assistant (SaaS)",
+      role: "Fullstack Engineer",
       desc: "An advanced research platform integrated with OpenClaw—a proactive AI agent with conversation memory and system automation capabilities for personal productivity.",
       tech: ["Next.js", "PostgreSQL", "OpenClaw AI", "Tailwind CSS"],
       link: null,
@@ -157,6 +158,7 @@ const CONFIG = {
     },
     {
       title: "Business Summit 2026",
+      role: "Fullstack Engineer",
       desc: "End-to-end conference website featuring real-time registration, speaker management, and sponsorship packages. Integrated with Sanity CMS for seamless content updates.",
       tech: ["Next.js", "Tailwind CSS", "Sanity CMS", "Zod"],
       link: "https://business-summit-2026.vercel.app/",
@@ -170,6 +172,7 @@ const CONFIG = {
     },
     {
       title: "NewsBlog",
+      role: "Fullstack Engineer",
       desc: "Full-stack editorial news platform with headless CMS, ISR auto-revalidation, and premium UI. Features 15 pages including article detail, category, author, tag, search, and RSS feed.",
       tech: [
         "Next.js 15",
@@ -189,6 +192,7 @@ const CONFIG = {
     },
     {
       title: "GoSkripsi",
+      role: "Frontend Engineer",
       desc: "Student research and thesis management system at UIN Raden Fatah Palembang. Built to simplify academic workflow for students and faculty administrators.",
       tech: ["Next.js", "Tailwind CSS v4", "React Query", "REST API"],
       link: "https://goskripsi.rafanovation.cloud",

@@ -103,7 +103,9 @@
     <div class="project-card${f ? " featured" : ""}">
       <div>
         <p class="project-number">0${i + 1}${f ? " — Featured" : ""}</p>
-        <h3>${p.title}</h3><p>${p.desc}</p>
+        <h3>${p.title}</h3>
+        ${p.role ? `<p class="project-role" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-muted); margin-bottom: 8px; font-weight: 600;">${p.role}</p>` : ""}
+        <p>${p.desc}</p>
         <div class="project-tech">${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}</div>
         <a href="${p.link}" class="project-link">${p.linkText} →</a>
       </div>
