@@ -6,7 +6,7 @@
 const CONFIG = {
   /* ─── IDENTITAS ──────────────────────────────────────────────── */
   name: "Devtective", // Nama / brand (navbar & footer)
-  title: "Freelance Web Developer", // Profesi (tab browser)
+  title: "Junior Software Engineer", // Profesi (tab browser)
   available: true, // true = badge hijau "Available"
 
   /* ─── HERO ───────────────────────────────────────────────────── */
@@ -14,7 +14,7 @@ const CONFIG = {
     headline: "I build websites that",
     headlineEm: "actually work", // Kata italic
     headlineEnd: "for your business.",
-    sub: "Web developer focused on clean, fast, and functional digital products. Working with clients in Indonesia and internationally.",
+    sub: "Junior Software Engineer and web developer focused on building clean, fast, and functional digital products. Working with clients in Indonesia and internationally.",
     cvLink: "CV_Abdi_Devtective.pdf",
     stats: [{ num: "2", label: "Projects Completed" }],
   },
@@ -23,7 +23,7 @@ const CONFIG = {
   about: {
     heading: "Developer with a problem-solving mindset.",
     bio: [
-      "I'm a web developer based in Indonesia, focused on building clean, performant websites and web applications. Fresh to the freelance world, but not to building things that work.",
+      "I'm a Junior Software Engineer based in Indonesia, focused on building clean, performant websites and web applications. Fresh to the professional world, but not to building things that work.",
       "I care about the details — fast load times, mobile responsiveness, clean code, and interfaces that feel intuitive. Not just websites that look good in screenshots.",
       "Available for project-based work with clients in Indonesia and internationally. I communicate clearly and deliver on time.",
     ],
@@ -33,15 +33,41 @@ const CONFIG = {
         subgroups: [
           {
             title: "Languages & Frameworks",
-            tags: ["Python", "JavaScript / TypeScript", "React.js / Next.js", "Node.js", "Express.js", "HTML", "CSS (Tailwind / Bootstrap)", "Zustand / Redux", "Framer Motion", "GraphQL", "SQL (PostgreSQL, MySQL)", "Prisma ORM", "MongoDB"],
+            tags: [
+              "Python",
+              "JavaScript / TypeScript",
+              "React.js / Next.js",
+              "Node.js",
+              "Express.js",
+              "HTML",
+              "CSS (Tailwind / Bootstrap)",
+              "Zustand / Redux",
+              "Framer Motion",
+              "GraphQL",
+              "SQL (PostgreSQL, MySQL)",
+              "Prisma ORM",
+              "MongoDB",
+            ],
           },
           {
             title: "Tools & Platforms",
-            tags: ["Git & GitHub", "Docker (basic)", "REST API design & integration", "Linux CLI", "Sanity CMS", "Postman", "Figma"],
+            tags: [
+              "Git & GitHub",
+              "Docker (basic)",
+              "REST API design & integration",
+              "Linux CLI",
+              "Sanity CMS",
+              "Postman",
+              "Figma",
+            ],
           },
           {
             title: "Cloud & DevOps (basic)",
-            tags: ["AWS / GCP fundamentals", "CI/CD pipeline (GitHub Actions)", "Vercel / DigitalOcean deployment"],
+            tags: [
+              "AWS / GCP fundamentals",
+              "CI/CD pipeline (GitHub Actions)",
+              "Vercel / DigitalOcean deployment",
+            ],
           },
         ],
       },
@@ -82,10 +108,53 @@ const CONFIG = {
     ],
   },
 
+  /* ─── EXPERIENCE ─────────────────────────────────────────────── */
+  experience: [
+    {
+      company: "PT. Global Tehnikatama Indonesia",
+      role: "Fullstack Engineer (Internship)",
+      period: "Jan 2026 — Present",
+      desc: "Developing 'AI Research Assistant' (SaaS). Integrated OpenClaw, a proactive AI agent with conversation memory and task execution capabilities, to automate user productivity workflows.",
+      tech: [
+        "Next.js",
+        "PostgreSQL",
+        "OpenClaw AI",
+        "TypeScript",
+        "Tailwind CSS",
+      ],
+    },
+
+    {
+      company: "Fakultas Sains dan Teknologi UIN Raden Fatah Palembang",
+      role: "Frontend Engineer (Internship)",
+      period: "Aug 2025 — Dec 2025",
+      desc: "Developed a special Student Research Information System (Sistem Informasi Penelitian Mahasiswa) specifically for the faculty. Collaborated with a team of developers and stakeholders to streamline academic research workflows.",
+      tech: [
+        "React.js (Next.js)",
+        "Tailwind CSS v4",
+        "JavaScript (ES6+)",
+        "REST API",
+      ],
+    },
+  ],
+
   /* ─── PROJECTS ───────────────────────────────────────────────── */
   // featured:true  → card besar (hanya 1). Sisanya card normal.
   // Tambah project: copy satu blok { ... }, paste di bawahnya, isi ulang.
   projects: [
+    {
+      title: "AI Research Assistant (SaaS)",
+      desc: "An advanced research platform integrated with OpenClaw—a proactive AI agent with conversation memory and system automation capabilities for personal productivity.",
+      tech: ["Next.js", "PostgreSQL", "OpenClaw AI", "Tailwind CSS"],
+      link: null,
+      linkText: "Coming Soon",
+      emoji: "<i class='ph ph-robot'></i>",
+      img: null,
+      bgFrom: "#F5F3FF",
+      bgTo: "#EDE9FE",
+      emojiColor: "#7C3AED",
+      featured: true,
+    },
     {
       title: "Business Summit 2026",
       desc: "End-to-end conference website featuring real-time registration, speaker management, and sponsorship packages. Integrated with Sanity CMS for seamless content updates.",
@@ -116,6 +185,19 @@ const CONFIG = {
       bgFrom: "#FFF1F2",
       bgTo: "#FFE4E6",
       emojiColor: "#C1121F",
+      featured: true,
+    },
+    {
+      title: "GoSkripsi",
+      desc: "Student research and thesis management system at UIN Raden Fatah Palembang. Built to simplify academic workflow for students and faculty administrators.",
+      tech: ["Next.js", "Tailwind CSS v4", "React Query", "REST API"],
+      link: "https://goskripsi.rafanovation.cloud",
+      linkText: "Launch GoSkripsi",
+      emoji: "<i class='ph ph-graduation-cap'></i>",
+      img: "images/thumbnails/goskripsi.png",
+      bgFrom: "#EFF6FF",
+      bgTo: "#DBEAFE",
+      emojiColor: "#2563EB",
       featured: true,
     },
   ],

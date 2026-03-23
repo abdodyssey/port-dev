@@ -408,6 +408,64 @@
         font-size: 0.8rem;
         color: var(--ink-soft);
       }
+      .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .experience-item {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        padding: 32px;
+        border-radius: var(--radius);
+        transition: border-color 0.2s;
+      }
+      .experience-item:hover {
+        border-color: var(--ink);
+      }
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+      .experience-item h3 {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 4px;
+        letter-spacing: -0.01em;
+      }
+      .experience-company {
+        color: var(--ink-muted);
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+      .experience-date {
+        font-size: 0.8rem;
+        background: var(--bg);
+        padding: 6px 14px;
+        border-radius: 100px;
+        color: var(--ink-soft);
+        font-weight: 500;
+        border: 1px solid var(--line);
+      }
+      .experience-desc {
+        color: var(--ink-soft);
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 24px;
+        font-weight: 300;
+      }
+      .experience-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
       .projects-bg {
         background: var(--surface);
       }

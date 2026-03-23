@@ -73,6 +73,29 @@
             .join(""),
         );
 
+        // Experience
+        set(
+          "experience-list",
+          C.experience
+            .map(
+              (ex) => `
+    <div class="experience-item">
+      <div class="experience-header">
+        <div>
+          <h3>${ex.role}</h3>
+          <p class="experience-company">${ex.company}</p>
+        </div>
+        <span class="experience-date">${ex.period}</span>
+      </div>
+      <p class="experience-desc">${ex.desc}</p>
+      <div class="experience-tech">
+        ${ex.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}
+      </div>
+    </div>`,
+            )
+            .join(""),
+        );
+
         // Projects
         const feats = C.projects.filter((p) => p.featured);
         const rest = C.projects.filter((p) => !p.featured);
