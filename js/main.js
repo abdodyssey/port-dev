@@ -1,0 +1,296 @@
+
+      /* ╔═══════════════════════════════════════════════════════════════╗
+   ║  ⛔ JANGAN EDIT DI BAWAH INI                                   ║
+   ╚═══════════════════════════════════════════════════════════════╝ */
+      document.addEventListener("DOMContentLoaded", () => {
+        const C = CONFIG;
+        const $ = (id) => document.getElementById(id);
+        const set = (id, html) => {
+          const el = $(id);
+          if (el) el.innerHTML = html;
+        };
+        const href = (id, url) => {
+          const el = $(id);
+          if (el) el.href = url;
+        };
+
+        document.title = `${C.name} — ${C.title}`;
+        set("nav-logo", C.name);
+        if (!C.available) {
+          const t = $("hero-tag");
+          if (t) t.style.display = "none";
+        }
+
+        // Hero
+        set(
+          "hero-h1",
+          `${C.hero.headline}<br><em>${C.hero.headlineEm}</em><br>${C.hero.headlineEnd}`,
+        );
+        set("hero-sub", C.hero.sub);
+        if (C.hero.cvLink) {
+          const cv = $("cv-btn");
+          if (cv) {
+            cv.href = C.hero.cvLink;
+            cv.style.display = "inline-flex";
+          }
+        }
+        set(
+          "hero-stats",
+          C.hero.stats
+            .map(
+              (s) =>
+                `<div><span class="stat-num">${s.num}</span><span class="stat-label">${s.label}</span></div>`,
+            )
+            .join(""),
+        );
+
+        // About
+        set("about-h2", C.about.heading);
+        set("about-bio", C.about.bio.map((p) => `<p>${p}</p>`).join(""));
+        set(
+          "about-skills",
+          C.about.skills
+            .map(
+              (g) => `
+    <div class="skill-group">
+      <p class="skill-group-title">${g.group}</p>
+      <div class="skill-tags">${g.tags.map((t) => `<span class="skill-tag">${t}</span>`).join("")}</div>
+    </div>`,
+            )
+            .join(""),
+        );
+
+        // Projects
+        const feats = C.projects.filter((p) => p.featured);
+        const rest = C.projects.filter((p) => !p.featured);
+        const pCard = (p, i, f) => `
+    <div class="project-card${f ? " featured" : ""}">
+      <div>
+        <p class="project-number">0${i + 1}${f ? " — Featured" : ""}</p>
+        <h3>${p.title}</h3><p>${p.desc}</p>
+        <div class="project-tech">${p.tech.map((t) => `<span class="tech-tag">${t}</span>`).join("")}</div>
+        <a href="${p.link}" class="project-link">${p.linkText} →</a>
+      </div>
+      <div class="project-visual" style="background:linear-gradient(135deg,${p.bgFrom},${p.bgTo}); ${p.img ? "" : `color:${p.emojiColor};`}height:${f ? 200 : 140}px${f ? "" : ";margin-top:20px"}">
+        ${
+          p.img
+            ? `
+          <div class="browser-mock">
+            <div class="browser-bar">
+              <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            </div>
+            <img src="${p.img}" alt="${p.title}">
+          </div>`
+            : p.emoji
+        }
+      </div>
+    </div>`;
+        set(
+          "project-grid",
+          feats.map((p, i) => pCard(p, i, true)).join("") +
+            rest.map((p, i) => pCard(p, feats.length + i, false)).join(""),
+        );
+
+        // Services
+        set(
+          "services-grid",
+          C.services
+            .map(
+              (s) => `
+    <div class="service-item">
+      <div class="service-icon">${s.icon}</div>
+      <h3>${s.title}</h3>
+      <p class="service-desc">${s.desc}</p>
+    </div>`,
+            )
+            .join(""),
+        );
+
+        // Process
+        set(
+          "process-steps",
+          C.process
+            .map(
+              (p, i) => `
+    <div class="process-step">
+      <div class="step-num">0${i + 1}</div>
+      <h3>${p.title}</h3><p>${p.desc}</p>
+    </div>`,
+            )
+            .join(""),
+        );
+
+        // Testimonials
+        set(
+          "testimonial-grid",
+          C.testimonials
+            .map(
+              (t) => `
+      <div class="testimonial-card">
+        <blockquote>"${t.quote}"</blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar" style="background:${t.avatarBg};color:${t.avatarColor}">${t.initials}</div>
+          <div><p class="author-name">${t.name}</p><p class="author-role">${t.role}</p></div>
+        </div>
+      </div>`,
+            )
+            .join("") +
+            `<div class="testimonial-placeholder">
+      <span style="font-size:1.5rem"><i class="ph ph-sparkle"></i></span>
+      <p>Your project could be featured here. Let's build something together.</p>
+      <a href="#contact" class="btn-primary" style="margin-top:8px;font-size:.8rem;padding:8px 18px;">Get in Touch</a>
+    </div>`,
+        );
+
+        // Contact
+        const ct = C.contact;
+        set("contact-h2", ct.heading);
+        set("contact-sub", ct.sub);
+        href("c-email", `mailto:${ct.email}`);
+        set("c-email", ct.email);
+        href("c-wa", `https://wa.me/${ct.whatsapp}`);
+        set("c-wa", ct.whatsappLabel);
+        href("c-li", ct.linkedin);
+        set("c-li", ct.linkedin.replace("https://", ""));
+        href("c-gh", ct.github);
+        set("c-gh", ct.github.replace("https://", ""));
+        set(
+          "svc-opts",
+          '<option value="">Select a service...</option>' +
+            ct.serviceOptions.map((o) => `<option>${o}</option>`).join(""),
+        );
+
+
+        // Footer
+        set("footer-text", `© ${C.footer.year} ${C.name} — ${C.footer.text}`);
+        href("f-gh", ct.github);
+        href("f-li", ct.linkedin);
+        if (ct.upwork) {
+          href("f-up", ct.upwork);
+        } else {
+          const el = $("f-up");
+          if (el) el.style.display = "none";
+        }
+
+        // Scroll reveal
+        const obs = new IntersectionObserver(
+          (e) =>
+            e.forEach((x) => {
+              if (x.isIntersecting) x.target.classList.add("visible");
+            }),
+          { threshold: 0.1 },
+        );
+        document.querySelectorAll(".fade-up").forEach((el) => obs.observe(el));
+
+        // Theme Logic
+        const themeBtn = $("theme-btn");
+        const getPreferredTheme = () => {
+          const stored = localStorage.getItem("theme");
+          if (stored) return stored;
+          return window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        };
+
+        const setTheme = (theme) => {
+          document.documentElement.setAttribute("data-theme", theme);
+          localStorage.setItem("theme", theme);
+          themeBtn.innerHTML = theme === "dark" ? "<i class='ph ph-sun'></i>" : "<i class='ph ph-moon'></i>";
+        };
+
+        setTheme(getPreferredTheme());
+
+        themeBtn.addEventListener("click", () => {
+          const current = document.documentElement.getAttribute("data-theme");
+          setTheme(current === "dark" ? "light" : "dark");
+        });
+
+        // EmailJS Integration
+        const showToast = (msg, isError = false) => {
+          const t = document.createElement("div");
+          t.className = `toast ${isError ? "toast-error" : "toast-success"}`;
+          t.innerHTML = `<i class="ph ${isError ? "ph-warning-circle" : "ph-check-circle"}" style="font-size:1.25rem;color:${isError ? "#ef4444" : "var(--green)"}"></i><span>${msg}</span>`;
+          document.body.appendChild(t);
+          requestAnimationFrame(() => requestAnimationFrame(() => t.classList.add("show")));
+          setTimeout(() => {
+            t.classList.remove("show");
+            setTimeout(() => t.remove(), 400);
+          }, 3000);
+        };
+
+        if (C.emailjs && C.emailjs.publicKey !== "YOUR_PUBLIC_KEY") {
+          emailjs.init({
+            publicKey: C.emailjs.publicKey,
+          });
+
+          const contactForm = $("contact-form");
+          const submitBtn = document.querySelector(".btn-submit");
+
+          if (contactForm) {
+            contactForm.addEventListener("submit", (e) => {
+              e.preventDefault();
+
+              submitBtn.innerText = "Sending...";
+              submitBtn.disabled = true;
+
+              emailjs
+                .sendForm(
+                  C.emailjs.serviceId,
+                  C.emailjs.templateId,
+                  contactForm,
+                )
+                .then(
+                  () => {
+                    showToast("Message sent successfully!");
+                    contactForm.reset();
+                    submitBtn.innerText = "Send Message →";
+                    submitBtn.disabled = false;
+                  },
+                  (error) => {
+                    showToast("Failed to send message. Please try again later.", true);
+                    console.error("EmailJS Error:", error);
+                    submitBtn.innerText = "Send Message →";
+                    submitBtn.disabled = false;
+                  },
+                );
+            });
+          }
+        } else {
+          // Fallback if not configured
+          const contactForm = $("contact-form");
+          if (contactForm) {
+            contactForm.addEventListener("submit", (e) => {
+              e.preventDefault();
+              showToast(
+                "EmailJS is not configured yet. Please update the CONFIG with your keys.",
+                true
+              );
+            });
+          }
+        }
+
+        // Custom Translate Dropdown Logic
+        const langToggle = $("lang-toggle-btn");
+        const langMenu = $("lang-menu");
+        if (langToggle && langMenu) {
+          langToggle.addEventListener("click", () => {
+            langMenu.classList.toggle("active");
+          });
+          document.addEventListener("click", (e) => {
+            if (!langToggle.contains(e.target) && !langMenu.contains(e.target)) {
+              langMenu.classList.remove("active");
+            }
+          });
+          document.querySelectorAll(".lang-option").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+              const lang = btn.getAttribute("data-lang");
+              const select = document.querySelector(".goog-te-combo");
+              if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+              }
+              langMenu.classList.remove("active");
+            });
+          });
+        }
+      });
