@@ -47,14 +47,27 @@
         // About
         set("about-h2", C.about.heading);
         set("about-bio", C.about.bio.map((p) => `<p>${p}</p>`).join(""));
+        // Skills
         set(
-          "about-skills",
+          "skills-grid",
           C.about.skills
             .map(
-              (g) => `
-    <div class="skill-group">
-      <p class="skill-group-title">${g.group}</p>
-      <div class="skill-tags">${g.tags.map((t) => `<span class="skill-tag">${t}</span>`).join("")}</div>
+              (cat) => `
+    <div class="skill-category">
+      <h3>${cat.category}</h3>
+      ${
+        cat.subgroups
+          ? cat.subgroups
+              .map(
+                (sub) => `
+        <div class="skill-subgroup">
+          <span class="skill-subgroup-title">${sub.title}</span>
+          <div class="skill-tags">${sub.tags.map((t) => `<span class="skill-tag">${t}</span>`).join("")}</div>
+        </div>`,
+              )
+              .join("")
+          : `<div class="skill-tags">${cat.tags.map((t) => `<span class="skill-tag">${t}</span>`).join("")}</div>`
+      }
     </div>`,
             )
             .join(""),

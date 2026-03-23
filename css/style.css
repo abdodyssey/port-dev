@@ -297,20 +297,92 @@
         letter-spacing: -0.03em;
         margin-bottom: 20px;
       }
+      #about .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      #about .section-label {
+        justify-content: center;
+      }
+      #about .section-label::after {
+        display: none;
+      }
+      #about .section-label::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--ink-muted);
+        margin-right: 12px;
+      }
       .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: start;
+        max-width: 800px;
+      }
+      .about-left h2 {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .about-left p {
         color: var(--ink-soft);
         line-height: 1.8;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
         font-weight: 300;
+        font-size: 1.1rem;
       }
       .about-right {
-        padding-top: 56px;
+        display: none;
+      }
+
+      .skills-bg {
+        background: var(--surface);
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+      }
+      .skill-category {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        padding: 32px;
+        border-radius: var(--radius);
+        transition: transform 0.2s;
+      }
+      .skill-category:hover {
+        transform: translateY(-4px);
+      }
+      .skill-category h3 {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--ink-muted);
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 700;
+      }
+      .skill-category h3::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+      .skill-subgroup {
+        margin-bottom: 24px;
+      }
+      .skill-subgroup:last-child {
+        margin-bottom: 0;
+      }
+      .skill-subgroup-title {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 12px;
+        display: block;
       }
       .skill-group {
         margin-bottom: 32px;
@@ -825,6 +897,7 @@
           gap: 32px;
         }
         .about-grid,
+        .skills-grid,
         .project-grid,
         .contact-wrap,
         .testimonial-grid {

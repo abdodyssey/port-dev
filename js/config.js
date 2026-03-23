@@ -29,26 +29,54 @@ const CONFIG = {
     ],
     skills: [
       {
-        group: "Frontend",
-        tags: [
-          "HTML / CSS",
-          "JavaScript",
-          "React.js",
-          "Tailwind CSS",
-          "Typscript",
-          "NextJS",
+        category: "TECHNICAL SKILLS",
+        subgroups: [
+          {
+            title: "Languages & Frameworks",
+            tags: ["Python", "JavaScript / TypeScript", "React.js / Next.js", "Node.js", "Express.js", "HTML", "CSS (Tailwind / Bootstrap)", "Zustand / Redux", "Framer Motion", "GraphQL", "SQL (PostgreSQL, MySQL)", "Prisma ORM", "MongoDB"],
+          },
+          {
+            title: "Tools & Platforms",
+            tags: ["Git & GitHub", "Docker (basic)", "REST API design & integration", "Linux CLI", "Sanity CMS", "Postman", "Figma"],
+          },
+          {
+            title: "Cloud & DevOps (basic)",
+            tags: ["AWS / GCP fundamentals", "CI/CD pipeline (GitHub Actions)", "Vercel / DigitalOcean deployment"],
+          },
         ],
       },
       {
-        group: "Backend",
-        tags: ["Node.js", "Express", "MySQL", "REST API"],
+        category: "AI & AUTOMATION",
+        tags: [
+          "Prompt engineering (Claude, ChatGPT, Gemini)",
+          "LLM API integration (OpenAI, Anthropic)",
+          "AI-assisted development (Cursor, GitHub Copilot, Claude Code)",
+          "Workflow automation (n8n / Zapier basic)",
+          "RAG pipeline (basic)",
+        ],
       },
       {
-        group: "Tools & Others",
-        tags: ["Git / GitHub", "Figma", "Vercel"],
+        category: "WEB DEVELOPMENT",
+        tags: [
+          "Full-stack web application development",
+          "Responsive & mobile-first design",
+          "E-commerce & landing page development",
+          "Performance optimization (Core Web Vitals)",
+          "SEO technical basic",
+        ],
       },
       {
-        group: "Languages",
+        category: "SOFT SKILLS & WORK STYLE",
+        tags: [
+          "Remote-ready: async communication, self-managed delivery",
+          "Technical documentation (Notion, Markdown)",
+          "Problem decomposition & system thinking",
+          "Fast learner — AI-native workflow",
+          "Collaborative via Slack / Linear / Figma",
+        ],
+      },
+      {
+        category: "MODERN LANGUAGES",
         tags: ["🇮🇩 Indonesian (Native)", "🇺🇸 English (Conversation)"],
       },
     ],
