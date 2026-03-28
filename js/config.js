@@ -15,7 +15,7 @@ const CONFIG = {
     headlineEm: "benar-benar bermanfaat", // Kata italic
     headlineEnd: "untuk bisnis Anda.",
     sub: "Junior Software Engineer dan pengembang web yang fokus membangun produk digital yang bersih, cepat, dan fungsional. Melayani klien di Indonesia maupun internasional.",
-    cvLink: "CV_Abdi_Devtective.pdf",
+    cvLink: "CV-M.Abdi Nugroho.jpg",
     stats: [{ num: "5", label: "Proyek Selesai" }],
   },
 
@@ -239,10 +239,10 @@ const CONFIG = {
   digitalProducts: [
     {
       title: "Selama Ini Kamu Cuma Nyia-nyiain AI",
-      desc: "Panduan praktis prompt engineering untuk mahasiswa — biar output AI-mu berhenti jadi biasa-biasa saja. <br><br><strong>Yang kamu dapat:</strong><br>• E-book 40+ halaman<br>• 30 template prompt siap pakai<br>• Konsultasi gratis seputar prompt engineer",
-      price: "Rp 39.000 <small style='text-decoration: line-through; opacity: 0.6; font-size: 0.8em;'>Rp 50.000</small>",
-      img: "images/products/ebook-ai.png",
-      badge: "Untuk semua jurusan · One-time · PDF",
+      desc: "Panduan praktis prompt engineering untuk mahasiswa — biar output AI-mu berhenti jadi biasa-biasa saja. <br><br><strong>Kategori:</strong> Untuk semua jurusan<br><br><strong>Yang kamu dapat:</strong><br>• E-book 40+ halaman<br>• 30 template prompt siap pakai<br>• Konsultasi gratis seputar prompt engineer",
+      price: "<span>Rp 39.000</span> <br> <small>Rp 50.000</small>",
+      emoji: "<i class='ph-fill ph-book-open'></i>",
+      badge: "E-BOOK · PDF",
       link: "https://wa.me/6285788141307?text=Halo%20Devtective,%20saya%20ingin%20membeli%20Ebook%3A%20Selama%20Ini%20Kamu%20Cuma%20Nyia-nyiain%20AI",
     },
   ],

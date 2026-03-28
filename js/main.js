@@ -137,16 +137,19 @@
                 .map(
                   (p) => `
             <div class="product-item">
-              <div class="product-img">
+              <div class="product-img"${p.img ? '' : ` style="font-size: 4rem; display: flex; align-items: center; justify-content: center; background: var(--surface); color: var(--ink); opacity: 0.8;"`}>
                 ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
-                <img src="${p.img || 'https://placehold.co/600x400'}" alt="${p.title}">
+                ${p.img ? `<img src="${p.img}" alt="${p.title}">` : (p.emoji || "<i class='ph ph-package'></i>")}
               </div>
               <div class="product-info">
                 <h3>${p.title}</h3>
-                <p>${p.desc}</p>
+                <p id="desc-${p.title.replace(/\s+/g, '-')}">${p.desc}</p>
+                <button class="btn-show-desc" onclick="toggleDesc('desc-${p.title.replace(/\s+/g, '-')}', this)">
+                  Lihat Detail <i class="ph ph-caret-down"></i>
+                </button>
                 <div class="product-footer">
                   <span class="product-price">${p.price}</span>
-                  <a href="${p.link}" class="btn-buy" target="_blank">Beli Sekarang <i class="ph-fill ph-whatsapp-logo"></i></a>
+                  <a href="${p.link}" class="btn-buy" target="_blank">Pesan via WA <i class="ph-fill ph-whatsapp-logo"></i></a>
                 </div>
               </div>
             </div>`,
@@ -159,6 +162,16 @@
             const navDp = document.querySelector('a[href="#digital-products"]');
             if (navDp) navDp.parentElement.style.display = "none";
         }
+
+        // Toggle Product Description Helper
+        window.toggleDesc = (id, btn) => {
+            const el = document.getElementById(id);
+            if (el) {
+                const isExpanded = el.classList.toggle('show-all');
+                btn.innerHTML = isExpanded ? `Sembunyikan <i class="ph ph-caret-down"></i>` : `Lihat Detail <i class="ph ph-caret-down"></i>`;
+                btn.classList.toggle('active', isExpanded);
+            }
+        };
 
         // Services
         set(
@@ -361,5 +374,16 @@
               langMenu.classList.remove("active");
             });
           });
+        }
+
+        // Handle initial hash scroll (for dynamic content height changes)
+        if (window.location.hash) {
+            const hash = window.location.hash;
+            setTimeout(() => {
+                const target = document.querySelector(hash);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 600); // Wait for animations and layout
         }
       });
