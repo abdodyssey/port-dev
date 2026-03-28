@@ -22,31 +22,32 @@
     <nav>
       <a href="#" class="nav-logo" id="nav-logo"></a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#digital-products">Produk</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#contact">Kontak</a></li>
       </ul>
       <div class="nav-right">
         <button id="theme-btn" class="theme-btn" aria-label="Toggle Theme">
           <i class='ph ph-moon'></i>
         </button>
-        <a href="#contact" class="nav-cta">Hire Me</a>
+        <a href="#contact" class="nav-cta">Hubungi Saya</a>
       </div>
     </nav>
 
     <section class="hero">
       <div class="hero-avatar">
         <img src="images/me.jpeg" alt="Profile Layout" loading="lazy" draggable="false" oncontextmenu="return false;" />
-        <div class="hero-tag" id="hero-tag">Available for freelance work</div>
+        <div class="hero-tag" id="hero-tag">Tersedia untuk freelance</div>
       </div>
       <h1 id="hero-h1"></h1>
       <p class="hero-sub" id="hero-sub"></p>
       <div class="hero-actions">
-        <a href="#projects" class="btn-primary">See My Work</a>
-        <a href="#contact" class="btn-secondary">Get in Touch</a>
+        <a href="#projects" class="btn-primary">Lihat Portofolio</a>
+        <a href="#contact" class="btn-secondary">Hubungi Saya</a>
         <a id="cv-btn" href="#" target="_blank" download class="btn-secondary" style="display:none; align-items:center; gap:8px;">
-          <i class="ph ph-download-simple"></i> Download CV
+          <i class="ph ph-download-simple"></i> Unduh CV
         </a>
       </div>
       <div class="hero-stats" id="hero-stats"></div>
@@ -54,7 +55,7 @@
 
     <section id="about">
       <div class="container fade-up">
-        <div class="section-label">About</div>
+        <div class="section-label">Tentang</div>
         <div class="about-grid">
           <div class="about-left">
             <h2 id="about-h2"></h2>
@@ -66,14 +67,14 @@
 
     <section id="skills" class="skills-bg fade-up">
       <div class="container">
-        <div class="section-label">Skills</div>
+        <div class="section-label">Keahlian</div>
         <div id="skills-grid" class="skills-grid"></div>
       </div>
     </section>
 
     <section id="experience" class="fade-up">
       <div class="container">
-        <div class="section-label">Experience</div>
+        <div class="section-label">Pengalaman</div>
         <div id="experience-list" class="experience-list"></div>
       </div>
     </section>
@@ -82,43 +83,53 @@
       <div class="container fade-up">
         <div class="projects-header">
           <div>
-            <div class="section-label">Projects</div>
-            <h2>Things I've built.</h2>
+            <div class="section-label">Proyek</div>
+            <h2>Karya yang telah saya bangun.</h2>
           </div>
           <p>
-            Personal and client projects. Each built with intention, not just as
-            practice.
+            Proyek personal dan klien. Setiap proyek dibangun dengan tujuan nyata, bukan sekadar latihan.
           </p>
         </div>
         <div class="project-grid" id="project-grid"></div>
       </div>
     </section>
 
+    <section id="digital-products" class="fade-up">
+      <div class="container">
+        <div class="section-label">Produk Digital</div>
+        <div class="digital-header">
+          <h2>Karya Digital yang Bisa Anda Miliki.</h2>
+          <p>Tingkatkan skill dan percepat workflow Anda dengan produk pilihan saya.</p>
+        </div>
+        <div id="product-list" class="product-list"></div>
+      </div>
+    </section>
+
     <section id="services">
       <div class="container fade-up">
-        <div class="section-label">Services</div>
-        <h2>What I can do for you.</h2>
+        <div class="section-label">Layanan</div>
+        <h2 style="font-size: 2.5rem; font-weight: 700;">Apa yang bisa saya bantu?</h2>
         <div class="services-grid" id="services-grid"></div>
       </div>
     </section>
 
     <section class="process-bg">
       <div class="container fade-up">
-        <div class="section-label">Process</div>
-        <h2>How we'll work together.</h2>
+        <div class="section-label">Proses</div>
+        <h2>Bagaimana kita akan bekerja sama.</h2>
         <div class="process-steps" id="process-steps"></div>
       </div>
     </section>
 
     <section id="testimonials">
       <div class="container fade-up">
-        <div class="section-label">Testimonials</div>
-        <h2>What clients say.</h2>
+        <div class="section-label">Testimoni</div>
+        <h2>Apa kata mereka.</h2>
         <div class="testimonials-note">
           <span style="font-size: 1.25rem;"><i class="ph-fill ph-push-pin"></i></span>
           <p>
-            These are from personal projects and collaborations. I'm building my
-            freelance client base — references available on request.
+            Ini adalah hasil dari proyek personal dan kolaborasi. Saya sedang membangun
+            basis klien freelance saya — referensi tersedia jika diminta.
           </p>
         </div>
         <div class="testimonial-grid" id="testimonial-grid"></div>
@@ -139,7 +150,7 @@
               </div>
               <div class="contact-item">
                 <div class="contact-icon"><i class="ph ph-whatsapp-logo"></i></div>
-                <div><span>WhatsApp</span><a id="c-wa"></a></div>
+                <div><span>WhatsApp</span><a id="c-wa" style="font-size: 0.95rem;"></a></div>
               </div>
               <div class="contact-item">
                 <div class="contact-icon"><i class="ph ph-linkedin-logo"></i></div>
@@ -154,7 +165,7 @@
           <form class="contact-form" id="contact-form">
             <div class="form-row">
               <div class="form-group">
-                <label>Your Name</label
+                <label>Nama Anda</label
                 ><input
                   type="text"
                   name="from_name"
@@ -175,20 +186,20 @@
               </div>
             </div>
             <div class="form-group">
-              <label>What do you need?</label
+              <label>Apa kebutuhan Anda?</label
               ><select name="service" id="svc-opts" required></select>
             </div>
 
             <div class="form-group">
-              <label>Tell me about your project</label
+              <label>Ceritakan tentang proyek Anda</label
               ><textarea
                 name="message"
                 id="message"
-                placeholder="What are you building? What's your timeline? Any specific requirements?"
+                placeholder="Apa yang ingin Anda bangun? Bagaimana lini masanya? Ada kebutuhan khusus?"
                 required
               ></textarea>
             </div>
-            <button type="submit" class="btn-submit">Send Message →</button>
+            <button type="submit" class="btn-submit">Kirim Pesan →</button>
           </form>
         </div>
       </div>

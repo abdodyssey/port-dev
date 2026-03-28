@@ -102,7 +102,7 @@
         const pCard = (p, i, f) => `
     <div class="project-card${f ? " featured" : ""}">
       <div>
-        <p class="project-number">0${i + 1}${f ? " — Featured" : ""}</p>
+        <p class="project-number">0${i + 1}${f ? " — Unggulan" : ""}</p>
         <h3>${p.title}</h3>
         ${p.role ? `<p class="project-role" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-muted); margin-bottom: 8px; font-weight: 600;">${p.role}</p>` : ""}
         <p>${p.desc}</p>
@@ -128,6 +128,37 @@
           feats.map((p, i) => pCard(p, i, true)).join("") +
             rest.map((p, i) => pCard(p, feats.length + i, false)).join(""),
         );
+
+        // Digital Products
+        if (C.digitalProducts && C.digitalProducts.length > 0) {
+            set(
+              "product-list",
+              C.digitalProducts
+                .map(
+                  (p) => `
+            <div class="product-item">
+              <div class="product-img">
+                ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ""}
+                <img src="${p.img || 'https://placehold.co/600x400'}" alt="${p.title}">
+              </div>
+              <div class="product-info">
+                <h3>${p.title}</h3>
+                <p>${p.desc}</p>
+                <div class="product-footer">
+                  <span class="product-price">${p.price}</span>
+                  <a href="${p.link}" class="btn-buy" target="_blank">Beli Sekarang <i class="ph-fill ph-whatsapp-logo"></i></a>
+                </div>
+              </div>
+            </div>`,
+                )
+                .join(""),
+            );
+        } else {
+            const dp = $("digital-products");
+            if (dp) dp.style.display = "none";
+            const navDp = document.querySelector('a[href="#digital-products"]');
+            if (navDp) navDp.parentElement.style.display = "none";
+        }
 
         // Services
         set(
@@ -175,8 +206,8 @@
             .join("") +
             `<div class="testimonial-placeholder">
       <span style="font-size:1.5rem"><i class="ph ph-sparkle"></i></span>
-      <p>Your project could be featured here. Let's build something together.</p>
-      <a href="#contact" class="btn-primary" style="margin-top:8px;font-size:.8rem;padding:8px 18px;">Get in Touch</a>
+      <p>Proyek Anda bisa ditampilkan di sini. Mari bangun sesuatu bersama.</p>
+      <a href="#contact" class="btn-primary" style="margin-top:8px;font-size:.8rem;padding:8px 18px;">Hubungi Saya</a>
     </div>`,
         );
 
@@ -194,7 +225,7 @@
         set("c-gh", ct.github.replace("https://", ""));
         set(
           "svc-opts",
-          '<option value="">Select a service...</option>' +
+          '<option value="">Pilih layanan...</option>' +
             ct.serviceOptions.map((o) => `<option>${o}</option>`).join(""),
         );
 
@@ -268,7 +299,7 @@
             contactForm.addEventListener("submit", (e) => {
               e.preventDefault();
 
-              submitBtn.innerText = "Sending...";
+              submitBtn.innerText = "Mengirim...";
               submitBtn.disabled = true;
 
               emailjs
@@ -279,15 +310,15 @@
                 )
                 .then(
                   () => {
-                    showToast("Message sent successfully!");
+                    showToast("Pesan berhasil dikirim!");
                     contactForm.reset();
-                    submitBtn.innerText = "Send Message →";
+                    submitBtn.innerText = "Kirim Pesan →";
                     submitBtn.disabled = false;
                   },
                   (error) => {
-                    showToast("Failed to send message. Please try again later.", true);
+                    showToast("Gagal mengirim pesan. Silakan coba lagi nanti.", true);
                     console.error("EmailJS Error:", error);
-                    submitBtn.innerText = "Send Message →";
+                    submitBtn.innerText = "Kirim Pesan →";
                     submitBtn.disabled = false;
                   },
                 );
@@ -300,7 +331,7 @@
             contactForm.addEventListener("submit", (e) => {
               e.preventDefault();
               showToast(
-                "EmailJS is not configured yet. Please update the CONFIG with your keys.",
+                "EmailJS belum dikonfigurasi. Silakan perbarui CONFIG dengan key Anda.",
                 true
               );
             });

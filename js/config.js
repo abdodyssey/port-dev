@@ -11,28 +11,28 @@ const CONFIG = {
 
   /* ─── HERO ───────────────────────────────────────────────────── */
   hero: {
-    headline: "I build websites that",
-    headlineEm: "actually work", // Kata italic
-    headlineEnd: "for your business.",
-    sub: "Junior Software Engineer and web developer focused on building clean, fast, and functional digital products. Working with clients in Indonesia and internationally.",
+    headline: "Saya membangun website yang",
+    headlineEm: "benar-benar bermanfaat", // Kata italic
+    headlineEnd: "untuk bisnis Anda.",
+    sub: "Junior Software Engineer dan pengembang web yang fokus membangun produk digital yang bersih, cepat, dan fungsional. Melayani klien di Indonesia maupun internasional.",
     cvLink: "CV_Abdi_Devtective.pdf",
-    stats: [{ num: "5", label: "Projects Completed" }],
+    stats: [{ num: "5", label: "Proyek Selesai" }],
   },
 
   /* ─── ABOUT ──────────────────────────────────────────────────── */
   about: {
-    heading: "Developer with a problem-solving mindset.",
+    heading: "Developer dengan pola pikir problem-solving.",
     bio: [
-      "I'm a Junior Software Engineer based in Indonesia, focused on building clean, performant websites and web applications. Fresh to the professional world, but not to building things that work.",
-      "I care about the details — fast load times, mobile responsiveness, clean code, and interfaces that feel intuitive. Not just websites that look good in screenshots.",
-      "Available for project-based work with clients in Indonesia and internationally. I communicate clearly and deliver on time.",
+      "Saya adalah seorang Junior Software Engineer yang berbasis di Indonesia, fokus membangun website dan aplikasi web yang bersih dan berperforma tinggi. Baru terjun ke dunia profesional, namun sudah berpengalaman dalam membangun sistem yang andal.",
+      "Saya sangat peduli pada detail — kecepatan akses, responsivitas mobile, kode yang bersih, dan antarmuka yang intuitif. Bukan sekadar website yang bagus dilihat, tapi juga nyaman digunakan.",
+      "Tersedia untuk pengerjaan berbasis proyek untuk klien di Indonesia maupun internasional. Saya berkomunikasi dengan jelas dan menjamin pengiriman tepat waktu.",
     ],
     skills: [
       {
-        category: "TECHNICAL SKILLS",
+        category: "KEAHLIAN TEKNIS",
         subgroups: [
           {
-            title: "Languages & Frameworks",
+            title: "Bahasa Pemrograman & Framework",
             tags: [
               "Python",
               "JavaScript / TypeScript",
@@ -50,11 +50,11 @@ const CONFIG = {
             ],
           },
           {
-            title: "Tools & Platforms",
+            title: "Alat & Platform",
             tags: [
               "Git & GitHub",
-              "Docker (basic)",
-              "REST API design & integration",
+              "Docker (dasar)",
+              "Desain & integrasi REST API",
               "Linux CLI",
               "Sanity CMS",
               "Postman",
@@ -62,7 +62,7 @@ const CONFIG = {
             ],
           },
           {
-            title: "Cloud & DevOps (basic)",
+            title: "Cloud & DevOps (dasar)",
             tags: [
               "AWS / GCP fundamentals",
               "CI/CD pipeline (GitHub Actions)",
@@ -72,38 +72,38 @@ const CONFIG = {
         ],
       },
       {
-        category: "AI & AUTOMATION",
+        category: "AI & OTOMATISASI",
         tags: [
           "Prompt engineering (Claude, ChatGPT, Gemini)",
-          "LLM API integration (OpenAI, Anthropic)",
-          "AI-assisted development (Cursor, GitHub Copilot, Claude Code)",
-          "Workflow automation (n8n / Zapier basic)",
-          "RAG pipeline (basic)",
+          "Integrasi LLM API (OpenAI, Anthropic)",
+          "Pengembangan berbantu AI (Cursor, GitHub Copilot, Claude Code)",
+          "Otomatisasi alur kerja (dasar n8n / Zapier)",
+          "RAG pipeline (dasar)",
         ],
       },
       {
-        category: "WEB DEVELOPMENT",
+        category: "PENGEMBANGAN WEB",
         tags: [
-          "Full-stack web application development",
-          "Responsive & mobile-first design",
-          "E-commerce & landing page development",
-          "Performance optimization (Core Web Vitals)",
-          "SEO technical basic",
+          "Pengembangan aplikasi web full-stack",
+          "Desain responsif & mobile-first",
+          "Pembuatan E-commerce & landing page",
+          "Optimasi performa (Core Web Vitals)",
+          "Dasar teknik SEO",
         ],
       },
       {
-        category: "SOFT SKILLS & WORK STYLE",
+        category: "SOFT SKILL & GAYA KERJA",
         tags: [
-          "Remote-ready: async communication, self-managed delivery",
-          "Technical documentation (Notion, Markdown)",
-          "Problem decomposition & system thinking",
-          "Fast learner — AI-native workflow",
-          "Collaborative via Slack / Linear / Figma",
+          "Siap kerja remote: komunikasi asinkron & mandiri",
+          "Dokumentasi teknis (Notion, Markdown)",
+          "Dekomposisi masalah & berpikir sistem",
+          "Cepat belajar — alur kerja berbasis AI",
+          "Kolaboratif via Slack / Linear / Figma",
         ],
       },
       {
-        category: "MODERN LANGUAGES",
-        tags: ["🇮🇩 Indonesian (Native)", "🇺🇸 English (Conversation)"],
+        category: "BAHASA",
+        tags: ["🇮🇩 Indonesia (Native)", "🇺🇸 Inggris (Percakapan)"],
       },
     ],
   },
@@ -112,9 +112,9 @@ const CONFIG = {
   experience: [
     {
       company: "PT. Global Tehnikatama Indonesia",
-      role: "Fullstack Engineer (Internship)",
-      period: "Jan 2026 — Present",
-      desc: "Developing 'AI Research Assistant' (SaaS). Integrated OpenClaw, a proactive AI agent with conversation memory and task execution capabilities, to automate user productivity workflows.",
+      role: "Fullstack Engineer (Magang)",
+      period: "Jan 2026 — Sekarang",
+      desc: "Mengembangkan 'AI Research Assistant' (SaaS). Mengintegrasikan OpenClaw, agen AI proaktif dengan memori percakapan dan kemampuan eksekusi tugas, untuk mengotomatisasi alur kerja produktivitas pengguna.",
       tech: [
         "Next.js",
         "PostgreSQL",
@@ -126,9 +126,9 @@ const CONFIG = {
 
     {
       company: "Fakultas Sains dan Teknologi UIN Raden Fatah Palembang",
-      role: "Frontend Engineer (Internship)",
-      period: "Aug 2025 — Dec 2025",
-      desc: "Developed a special Student Research Information System (Sistem Informasi Penelitian Mahasiswa) specifically for the faculty. Collaborated with a team of developers and stakeholders to streamline academic research workflows.",
+      role: "Frontend Engineer (Magang)",
+      period: "Agu 2025 — Des 2025",
+      desc: "Membangun Sistem Informasi Penelitian Mahasiswa khusus untuk fakultas. Berkolaborasi dengan tim pengembang dan stakeholder untuk menyederhanakan alur kerja penelitian akademik.",
       tech: [
         "React.js (Next.js)",
         "Tailwind CSS v4",
@@ -145,10 +145,10 @@ const CONFIG = {
     {
       title: "AI Research Assistant (SaaS)",
       role: "Fullstack Engineer",
-      desc: "An advanced research platform integrated with OpenClaw—a proactive AI agent with conversation memory and system automation capabilities for personal productivity.",
+      desc: "Platform riset canggih yang terintegrasi dengan OpenClaw—agen AI proaktif dengan memori percakapan dan kemampuan otomatisasi sistem untuk produktivitas personal.",
       tech: ["Next.js", "PostgreSQL", "OpenClaw AI", "Tailwind CSS"],
       link: null,
-      linkText: "Coming Soon",
+      linkText: "Segera Hadir",
       emoji: "<i class='ph ph-robot'></i>",
       img: null,
       bgFrom: "#F5F3FF",
@@ -159,10 +159,10 @@ const CONFIG = {
     {
       title: "Business Summit 2026",
       role: "Fullstack Engineer",
-      desc: "End-to-end conference website featuring real-time registration, speaker management, and sponsorship packages. Integrated with Sanity CMS for seamless content updates.",
+      desc: "Website konferensi lengkap dengan fitur pendaftaran real-time, manajemen pembicara, dan paket sponsor. Terintegrasi dengan Sanity CMS untuk pembaruan konten yang mudah.",
       tech: ["Next.js", "Tailwind CSS", "Sanity CMS", "Zod"],
       link: "https://business-summit-2026.vercel.app/",
-      linkText: "View Live Site",
+      linkText: "Lihat Website",
       emoji: "<i class='ph ph-buildings'></i>",
       img: "images/thumbnails/business-summit-2026.png",
       bgFrom: "#FFF7ED",
@@ -173,7 +173,7 @@ const CONFIG = {
     {
       title: "NewsBlog",
       role: "Fullstack Engineer",
-      desc: "Full-stack editorial news platform with headless CMS, ISR auto-revalidation, and premium UI. Features 15 pages including article detail, category, author, tag, search, and RSS feed.",
+      desc: "Platform berita editorial full-stack dengan headless CMS, auto-revalidasi ISR, dan UI premium. Dilengkapi 15 halaman termasuk detail artikel, kategori, penulis, tag, pencarian, dan RSS feed.",
       tech: [
         "Next.js 16",
         "Tailwind CSS v4",
@@ -182,7 +182,7 @@ const CONFIG = {
         "Vercel",
       ],
       link: "https://devbloq.vercel.app/",
-      linkText: "View Live Site",
+      linkText: "Lihat Website",
       emoji: "<i class='ph ph-newspaper'></i>",
       img: "images/thumbnails/news-blog.png",
       bgFrom: "#FFF1F2",
@@ -193,10 +193,10 @@ const CONFIG = {
     {
       title: "GoSkripsi",
       role: "Frontend Engineer",
-      desc: "Student research and thesis management system at UIN Raden Fatah Palembang. Built to simplify academic workflow for students and faculty administrators.",
+      desc: "Sistem manajemen penelitian dan skripsi mahasiswa di UIN Raden Fatah Palembang. Dibangun untuk menyederhanakan alur kerja akademik bagi mahasiswa dan admin fakultas.",
       tech: ["Next.js", "Tailwind CSS v4", "React Query", "REST API"],
       link: "https://goskripsi.rafanovation.cloud",
-      linkText: "Launch GoSkripsi",
+      linkText: "Buka GoSkripsi",
       emoji: "<i class='ph ph-graduation-cap'></i>",
       img: "images/thumbnails/goskripsi.png",
       bgFrom: "#EFF6FF",
@@ -207,10 +207,10 @@ const CONFIG = {
     {
       title: "Lumière Skincare",
       role: "Fullstack Engineer",
-      desc: "Premium local skincare brand utilizing natural Indonesian ingredients. Built with a focus on clean, natural editorial design and mobile responsiveness.",
+      desc: "Brand skincare lokal premium yang menggunakan bahan alami Indonesia. Dibangun dengan fokus pada desain editorial yang bersih dan alami serta responsivitas mobile.",
       tech: ["Next.js", "React", "Tailwind CSS"],
       link: "https://lumiere-skincare-seven.vercel.app/",
-      linkText: "View Live Site",
+      linkText: "Lihat Website",
       emoji: "<i class='ph ph-sparkle'></i>",
       img: "images/thumbnails/lumiere-skincare.png",
       bgFrom: "#ECFDF5",
@@ -221,10 +221,10 @@ const CONFIG = {
     {
       title: "Dapur Sari",
       role: "Fullstack Engineer",
-      desc: "Professional catering and home-cooked meal service in Palembang. Features menu catalogs and direct service inquiries for corporate and personal events.",
+      desc: "Layanan katering profesional dan masakan rumah di Palembang. Menyediakan katalog menu dan layanan pemesanan langsung untuk acara korporat maupun personal.",
       tech: ["Next.js", "React", "Tailwind CSS"],
       link: "https://dapur-sari.vercel.app/",
-      linkText: "View Live Site",
+      linkText: "Lihat Website",
       emoji: "<i class='ph ph-cooking-pot'></i>",
       img: "images/thumbnails/dapur-sari.png",
       bgFrom: "#FFF7ED",
@@ -234,58 +234,71 @@ const CONFIG = {
     },
   ],
 
+  /* ─── DIGITAL PRODUCTS ───────────────────────────────────────── */
+  // Produk digital yang bisa dibeli langsung via WhatsApp.
+  digitalProducts: [
+    {
+      title: "Selama Ini Kamu Cuma Nyia-nyiain AI",
+      desc: "Panduan praktis prompt engineering untuk mahasiswa — biar output AI-mu berhenti jadi biasa-biasa saja. <br><br><strong>Yang kamu dapat:</strong><br>• E-book 40+ halaman<br>• 30 template prompt siap pakai<br>• Konsultasi gratis seputar prompt engineer",
+      price: "Rp 39.000 <small style='text-decoration: line-through; opacity: 0.6; font-size: 0.8em;'>Rp 50.000</small>",
+      img: "images/products/ebook-ai.png",
+      badge: "Untuk semua jurusan · One-time · PDF",
+      link: "https://wa.me/6285788141307?text=Halo%20Devtective,%20saya%20ingin%20membeli%20Ebook%3A%20Selama%20Ini%20Kamu%20Cuma%20Nyia-nyiain%20AI",
+    },
+  ],
+
   /* ─── SERVICES ───────────────────────────────────────────────── */
   // Tambah service: copy satu baris { ... }, paste di bawahnya, isi ulang.
   services: [
     {
       icon: "<i class='ph ph-globe'></i>",
-      title: "Website Development",
-      desc: "Company profile, landing page, or portfolio. Fast, mobile-first, SEO-optimized.",
-      price: "Starting from Rp 3.000.000",
+      title: "Pembuatan Website",
+      desc: "Profil perusahaan, landing page, atau portofolio. Cepat, responsif, dan optimal untuk SEO.",
+      price: "Mulai dari Rp 3.000.000",
     },
     {
       icon: "<i class='ph ph-shopping-cart'></i>",
-      title: "E-Commerce",
-      desc: "Online store with catalog, cart, payment gateway (Midtrans/Stripe), and order management.",
-      price: "Starting from Rp 8.000.000",
+      title: "Toko Online (E-Commerce)",
+      desc: "Toko online dengan katalog, keranjang keranjang belanja, gerbang pembayaran (Midtrans/Stripe), dan manajemen pesanan.",
+      price: "Mulai dari Rp 8.000.000",
     },
     {
       icon: "<i class='ph ph-gear'></i>",
-      title: "Web App & Dashboard",
-      desc: "Custom web app, admin panel, or internal tools tailored to your business workflow.",
-      price: "Starting from Rp 12.000.000",
+      title: "Aplikasi Web & Dashboard",
+      desc: "Aplikasi web kustom, panel admin, atau alat internal yang disesuaikan dengan alur bisnis Anda.",
+      price: "Mulai dari Rp 12.000.000",
     },
     {
       icon: "<i class='ph ph-plugs'></i>",
-      title: "API Integration",
-      desc: "Connect your site to WhatsApp API, Google services, payment gateways, or custom REST APIs.",
-      price: "Starting from Rp 2.000.000",
+      title: "Integrasi API",
+      desc: "Menghubungkan website Anda ke API WhatsApp, layanan Google, gerbang pembayaran, atau API kustom lainnya.",
+      price: "Mulai dari Rp 2.000.000",
     },
     {
       icon: "<i class='ph ph-device-mobile'></i>",
-      title: "Responsive Redesign",
-      desc: "Your site not mobile-friendly? I'll redesign and rebuild it properly without losing your content.",
-      price: "Starting from Rp 4.000.000",
+      title: "Redesain Responsif",
+      desc: "Website Anda tidak ramah ponsel? Saya akan mendesain ulang dan membangunnya kembali dengan benar tanpa menghilangkan konten Anda.",
+      price: "Mulai dari Rp 4.000.000",
     },
   ],
 
   /* ─── PROCESS ────────────────────────────────────────────────── */
   process: [
     {
-      title: "Discovery Call",
-      desc: "We discuss your goals, timeline, and budget. No commitment needed — just clarity.",
+      title: "Konsultasi Awal",
+      desc: "Kita diskusikan tujuan, lini masa (timeline), dan anggaran Anda. Tanpa komitmen — cukup penjelasan yang jelas.",
     },
     {
-      title: "Proposal & Quote",
-      desc: "I send a clear scope and fixed-price quote. No hidden costs or surprises.",
+      title: "Proposal & Penawaran",
+      desc: "Saya kirimkan rincian pengerjaan dan harga tetap. Tanpa biaya tersembunyi atau kejutan biaya di akhir.",
     },
     {
-      title: "Build & Update",
-      desc: "I build in stages with regular updates. Feedback at every checkpoint.",
+      title: "Pengerjaan & Update",
+      desc: "Saya membangun secara bertahap dengan update rutin. Feedback Anda diperlukan di setiap tahap.",
     },
     {
-      title: "Launch & Handoff",
-      desc: "Go live, plus a walkthrough so you can manage the site independently.",
+      title: "Peluncuran & Penyerahan",
+      desc: "Website siap online, plus panduan singkat agar Anda bisa mengelola website secara mandiri.",
     },
   ],
 
@@ -295,31 +308,31 @@ const CONFIG = {
 
   /* ─── CONTACT ────────────────────────────────────────────────── */
   contact: {
-    heading: "Let's build something together.",
-    sub: "Have a project in mind? Tell me about it. I'll get back to you within 24 hours — not with a template, with a real answer.",
+    heading: "Mari bangun sesuatu yang hebat bersama.",
+    sub: "Punya rencana proyek? Ceritakan kepada saya. Saya akan merespons dalam 24 jam — bukan dengan pesan otomatis, tapi jawaban nyata.",
     email: "abdodyssey@gmail.com",
     whatsapp: "6285788141307",
     whatsappLabel: "+62 85788141307",
     linkedin: "https://www.linkedin.com/in/m-abdi-nugroho/",
     github: "https://github.com/abdodyssey",
     serviceOptions: [
-      "Website Development",
-      "E-Commerce",
-      "Web App / Dashboard",
-      "API Integration",
-      "Something else",
+      "Pembuatan Website",
+      "Toko Online (E-Commerce)",
+      "Aplikasi Web / Dashboard",
+      "Integrasi API",
+      "Lainnya",
     ],
     budgetOptions: [
       "< Rp 3.000.000",
       "Rp 3.000.000 – 10.000.000",
       "Rp 10.000.000 – 25.000.000",
       "> Rp 25.000.000",
-      "Let's discuss",
+      "Mari diskusikan",
     ],
   },
 
   /* ─── FOOTER ─────────────────────────────────────────────────── */
-  footer: { text: "Built with care, delivered on time.", year: 2025 },
+  footer: { text: "Dibangun dengan sepenuh hati, selesai tepat waktu.", year: 2025 },
 
   /* ─── EMAILJS (Isi di sini agar fitur kontak jalan) ───────────── */
   emailjs: {
